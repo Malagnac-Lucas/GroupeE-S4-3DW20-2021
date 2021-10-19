@@ -24,17 +24,19 @@
     <section class="bordure">
         <p>
             Météo
+                    
         </p>
     </section>
 
     <section class="contenu">
         <h1>
             {{ _ville|capitalize }}
-            , 
+            <!--il y avait une virgule qui ne servait a rien ici-->
             {{ _ville.country|upper }}
             <a href="http://maps.google.com/maps?q={{ _ville.coord.lat }},{{ _ville.coord.lon }}" class="lk" target="_blank" title="Voir sur une carte">
                 Voir sur une carte
-                	    	
+                                	    	
+                            
             </a>
         </h1>
         <!--On ferme la balise Twig avec “ %} ”-->
@@ -43,6 +45,7 @@
                 <div class="numero_jour">
                     <h2>
                         Météo du 
+                                                
                         {{ journee.dt|date('d/m/Y') }}
                     </h2>
                 </div>
@@ -52,8 +55,10 @@
                         {{ journee.temp.day }}
                         <span class="degree-symbol">
                             °
+                                                    
                         </span>
                         C
+                                            
                     </h2>
                 </div>
 
@@ -62,12 +67,14 @@
                         <span>
                             {{ journee.speed }}
                             km/h
+                                                    
                         </span>
                     </li>
                     <li class="fontawesome-tint center">
                         <span>
                             {{ journee.humidity }}
                             %
+                                                    
                         </span>
                     </li>
                     <li class="fontawesome-dashboard right">
@@ -78,6 +85,7 @@
                 </ul>
                 <div class="description">
                     Description : 
+                                        
                     {{ journee.weather|first.description|capitalize }}
                 </div>
             </div>
