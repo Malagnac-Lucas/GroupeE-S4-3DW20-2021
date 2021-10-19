@@ -59,7 +59,7 @@ function getMeteoImage($code)
 	//Il manquait l’accolade « { » de la fonction « if () » pour fermer la fonction.
 		return $_icones_meteo[$code];
 	} else {
-		return 'entypo-help';
+		return 'entypo-help';Github test
 	}
 }
 
