@@ -22,8 +22,11 @@ $data_contenu = file_get_contents($data_url);
 $_data_array = json_decode($data_contenu, true);
 
 $_ville = $_data_array['city'];
-$_journees_meteo = $_data_array['liste'];
-
+$_journees_meteo = $_data_array['list'];
+//il faut afficher les informations structurées d’une variable avec, 
+//var_dump($_data_array);
+//die();
+//Par conséquent, on enlève le “e” de la variable “liste”
 for ($i = 0; $i < count($_journees_meteo); $i++) {
 	$_meteo = getMeteoImage($_journees_meteo[$i]['weather'][0]['icon']);
 
@@ -56,10 +59,9 @@ function getMeteoImage($code)
 	);
 
 	if (array_key_exists($code, $_icones_meteo)) {
-	//Il manquait l’accolade « { » de la fonction « if () » pour fermer la fonction.
+		//Il manquait l’accolade « { » de la fonction « if () » pour fermer la fonction.
 		return $_icones_meteo[$code];
 	} else {
-		return 'entypo-help';Github test
+		return 'entypo-help';
 	}
 }
-
