@@ -22,7 +22,6 @@
 	$_ville = $_data_array['city'];
 	$_journees_meteo = $_data_array['list'];
 	
-	
 	for ($i = 0; $i < count($_journees_meteo); $i++) {
 		$_meteo = getMeteoImage($_journees_meteo[$i]['weather'][0]['icon']);
 		
