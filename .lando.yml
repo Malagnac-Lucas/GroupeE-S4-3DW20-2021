@@ -1,0 +1,4 @@
+name: s4-debug
+recipe: lamp
+config:
+  webroot: .
