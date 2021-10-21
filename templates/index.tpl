@@ -30,13 +30,12 @@
 
     <section class="contenu">
         <h1>
-            {{ _ville|capitalize }}
+            <!--Il manquait le '.name' pour afficher la météo de la ville en question (Limoges).-->
+            {{ _ville.name|capitalize }}
             <!--il y avait une virgule qui ne servait a rien ici-->
             {{ _ville.country|upper }}
             <a href="http://maps.google.com/maps?q={{ _ville.coord.lat }},{{ _ville.coord.lon }}" class="lk" target="_blank" title="Voir sur une carte">
-                Voir sur une carte
-                                	    	
-                            
+                Voir sur une carte             
             </a>
         </h1>
         <!--On ferme la balise Twig avec “ %} ”-->
