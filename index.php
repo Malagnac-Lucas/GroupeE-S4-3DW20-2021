@@ -38,8 +38,8 @@ echo $template_index->render(array(
 	//On rajoute la flèche 
 	'_journees_meteo' => $_journees_meteo,
 	'_ville' => $_ville,
-	var_dump($_ville),
-	die(),
+	//var_dump($_ville),
+	//die(),
 	'n_jours_previsions' => $n_jours_previsions
 	//L’égal n'était pas écrit correctement sur trois variables.
 	//Il faut mettre “==” lorsque que l’on veut que deux variables soit égale lorsqu’elle retourne “True”.
