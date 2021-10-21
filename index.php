@@ -22,6 +22,7 @@ $data_contenu = file_get_contents($data_url);
 $_data_array = json_decode($data_contenu, true);
 
 $_ville = $_data_array['city'];
+
 $_journees_meteo = $_data_array['list'];
 //il faut afficher les informations structurées d’une variable avec, 
 //var_dump($_data_array);
@@ -34,9 +35,12 @@ for ($i = 0; $i < count($_journees_meteo); $i++) {
 }
 
 echo $template_index->render(array(
-	'_journees_meteo' == $_journees_meteo,
-	'_ville' == $_ville,
-	'n_jours_previsions' == $n_jours_previsions
+	//On rajoute la flèche 
+	'_journees_meteo' => $_journees_meteo,
+	'_ville' => $_ville,
+	var_dump($_ville),
+	die(),
+	'n_jours_previsions' => $n_jours_previsions
 	//L’égal n'était pas écrit correctement sur trois variables.
 	//Il faut mettre “==” lorsque que l’on veut que deux variables soit égale lorsqu’elle retourne “True”.
 ));
